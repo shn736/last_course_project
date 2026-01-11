@@ -27,7 +27,7 @@ INSTALLED_APPS = [
     "habits",
     "users",
     "corsheaders",
-    'drf_yasg',
+    "drf_yasg",
 ]
 
 MIDDLEWARE = [
