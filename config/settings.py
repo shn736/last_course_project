@@ -81,9 +81,6 @@ DATABASES = {
 }
 
 
-# Password validation
-# https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
@@ -105,7 +102,7 @@ CELERY_BROKER_URL = "redis://localhost:6379/0"
 CELERY_BEAT_SCHEDULE = {
     "schedule-reminders-every-10-minutes": {
         "task": "habits.tasks.schedule_reminders",
-        "schedule": crontab(minute="*/10"),  # Каждые 10 минут
+        "schedule": crontab(minute="*/10"),
     },
 }
 
